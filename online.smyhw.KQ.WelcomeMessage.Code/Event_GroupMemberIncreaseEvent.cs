@@ -29,8 +29,10 @@ namespace online.smyhw.KQ.WelcomeMessage.Code
             if (!Sdata.ISready) { Sdata.log.Info("失败", "群" + e.FromGroup.Id.ToString() + "初始化没有完成"); return; }//如果配置没有成功加载，则不处理消息
             String msg = (String)Sdata.MessageMap[e.FromGroup.Id.ToString()];
             if (msg == null) { Sdata.log.Info("失败", "群"+e.FromGroup.Id.ToString()+"没有对应的进群消息"); return; }
-            CQCode cqat = e.FromQQ.CQCode_At();
-            Sdata.APIII.SendGroupMessage(e.FromGroup, cqat,msg);
+            CQCode cqat = e.BeingOperateQQ.CQCode_At();
+            msg = System.Text.RegularExpressions.Regex.Unescape(msg);
+            msg = System.Text.RegularExpressions.Regex.Unescape(msg);
+            Sdata.APIII.SendGroupMessage(e.FromGroup, cqat+"\n"+msg);
         }
     }
 }

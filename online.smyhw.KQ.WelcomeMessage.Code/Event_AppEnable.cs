@@ -46,7 +46,7 @@ namespace online.smyhw.KQ.WelcomeMessage.Code
                 String qqGroup = temp1[0].Trim();
                 String temp2 = line_text.Substring(line_text.IndexOf("=")+1);
                 String WelcomeMsg = temp2.Trim();
-                Sdata.log.Info("初始化", "配置项目{QQ="+qqGroup+";msg="+WelcomeMsg+"}");
+                Sdata.log.Info("初始化", "配置项目{QQ=" + qqGroup+";msg="+WelcomeMsg+"}");
                 Sdata.MessageMap.Add(qqGroup, WelcomeMsg);
             }
             config_file.Close();
