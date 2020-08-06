@@ -2,6 +2,9 @@
 单功能的加群欢迎消息
 
 使用 <a href="https://cqp.cc/">酷Q</a> 以及 <a href="https://github.com/Jie2GG/Native.Framework">Native.Framework</a>  
+
+#
+<a href="https://github.com/Jie2GG/Native.Framework">插件发布帖</a>
 #  
 第一次启动时，会在酷Q的根目录下创建配置文件WelcomeMessage.txt  
 该文件允许以‘#’开头的注释行  
